@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: url("img/fonOsnT.png") center/cover no-repeat fixed;
+
+    display: grid;
+    grid-template-rows: 80px 1fr;
+    grid-template-columns: 220px 1fr;
+
+    grid-template-areas:
+        "logo title"
+        "menu main";
+
+    height: 100vh;
+}
+
+/* Верхние блоки */
+#logo,
+#title {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+/* Логотип */
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Убираем рамки/подчеркивания */
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Размер логотипа (можешь менять) */
+.logo-img {
+    width: 90px;      /* можно больше/меньше */
+    height: auto;
+}
+
+/* Название */
+#title {
+    grid-area: title;
+    border: 1px solid #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Левое меню — полупрозрачная панель */
+nav {
+    grid-area: menu;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+    /* ТЁМНЫЙ ПОЛУПРОЗРАЧНЫЙ СТЕКЛЯННЫЙ ФОН */
+    background: rgba(25, 25, 25, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    color: white;
+}
+
+/* Основной текст — светлый стеклянный фон */
+main {
+    grid-area: main;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    overflow-y: auto;
+
+    /* СВЕТЛЫЙ ПОЛУПРОЗРАЧНЫЙ ФОН */
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Меню */
+nav ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+nav li {
+    margin-bottom: 8px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+summary {
+    list-style: none; /* убирает стандартную стрелку */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+details > ol {
+    margin-top: 10px;
+}
+
+/* Кнопка внизу меню */
+#feedbackButton {
+    margin-top: auto;
+    padding: 10px;
+    border-radius: 6px;
+
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+
+    cursor: pointer;
+    backdrop-filter: blur(3px);
+}
+
+#feedbackButton:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
